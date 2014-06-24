@@ -51,29 +51,40 @@
 	</script>
 </head>
 
-<body>
-<div class="container" style="width: 1000px;">
-	<div class="row clearfix">
-		<div class="col-md-2 column">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			     <img src="<?php echo ot_get_option('logo') ?>" width="200px" height="200px" alt="">
+<body style="padding-top: 0px;">
+<div class="container" style="width: 1000px; margin-top: -32px;">
+	<!-- HEADER -->
+    <div class="row clearfix" style="z-index: 1;">
+		<div class="col-md-3 column">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+    			     <img src="<?php echo ot_get_option('logo') ?>" width="200px" height="200px" alt="">
             </a>
 		</div>
-		<div class="col-md-10 column">
+		<div class="col-md-9 column">
             <?php
             echo do_shortcode(ot_get_option('image_slider_shortcode')); ?>
-            
 		</div>
 	</div>
-	<div class="row clearfix">
-		<div class="col-md-2 column">
-			<div class="row clearfix">
+    <!-- END HEADER -->
+    
+    <!-- BODY -->
+	<div class="row clearfix" style="margin-top: 20px!important; z-index: 5;">
+		<!-- LEFT -->
+        <div class="col-md-3 column">
+			<!-- MAIN MENU -->
+            <div class="row clearfix">
 				<div class="col-md-12 column">
-                    <script type="text/javascript">
+                    <div class="panel panel-default">
+                          <div class="panel-body" style="padding-left: 0px; padding-right: 0px; padding-top: 2px; padding-bottom: 2px;">
+                            <script type="text/javascript">
                         $(document).ready(function () {
                             // Create a jqxMenu
                             $("#jqxMenu").jqxMenu({ width: '100%', mode: 'vertical', theme: 'metro'});
                             $("#jqxMenu").css('visibility', 'visible');
+                            $("#jqxMenu").css('border', '0px');
+                            //$("#jqxMenu").css('border-radius', '5px');
+                            $("#jqxMenu").css('margin-left', '0px');
+                            //$("#jqxMenu").css('background-color', '');
                         });
                     </script>
                     <div id='qd_jqxWidget' style='width:100%;'>
@@ -102,11 +113,16 @@
                     
                     ?>
                     </div>
+                          </div>
+                    </div>
+                    
 				</div>
 			</div>
+            <!--END MAIN MENU -->
 			<div class="row clearfix">
 				<div class="col-md-12 column">
 					Menu 2
 				</div>
 			</div>
 		</div>
+        <!-- END LEFT -->
