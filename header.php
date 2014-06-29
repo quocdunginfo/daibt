@@ -71,7 +71,12 @@
 	<div class="row clearfix" style="margin-top: 20px!important; z-index: 5;">
 		<!-- LEFT -->
         <div class="col-md-3 column">
-			<!-- MAIN MENU -->
+			
+            <div class="row clearfix">
+                <?php get_sidebar('sidebar-1'); ?>
+            </div>
+            <!-- MAIN MENU -->
+            <!--
             <div class="row clearfix">
 				<div class="col-md-12 column">
                     <div class="panel panel-default">
@@ -90,26 +95,26 @@
                     <div id='qd_jqxWidget' style='width:100%;'>
 
 					<?php
-                    $defaults = array(
-                    	'theme_location'  => 'main_menu',
-                    	'menu'            => '',
-                    	'container'       => 'div',
-                    	'container_class' => '',
-                    	'container_id'    => 'jqxMenu',
-                    	'menu_class'      => 'menu',
-                    	'menu_id'         => '',
-                    	'echo'            => true,
-                    	'fallback_cb'     => 'wp_page_menu',
-                    	'before'          => '',
-                    	'after'           => '',
-                    	'link_before'     => '',
-                    	'link_after'      => '',
-                    	'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    	'depth'           => 0,
-                    	'walker'          => ''
-                    );
-                    
-                    wp_nav_menu( $defaults );
+                    //$defaults = array(
+//                    	'theme_location'  => 'main_menu',
+//                    	'menu'            => '',
+//                    	'container'       => 'div',
+//                    	'container_class' => '',
+//                    	'container_id'    => 'jqxMenu',
+//                    	'menu_class'      => 'menu',
+//                    	'menu_id'         => '',
+//                    	'echo'            => true,
+//                    	'fallback_cb'     => 'wp_page_menu',
+//                    	'before'          => '',
+//                    	'after'           => '',
+//                    	'link_before'     => '',
+//                    	'link_after'      => '',
+//                    	'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+//                    	'depth'           => 0,
+//                    	'walker'          => ''
+//                    );
+//                    
+//                    wp_nav_menu( $defaults );
                     
                     ?>
                     </div>
@@ -118,6 +123,29 @@
                     
 				</div>
 			</div>
+            -->
+            <div class="row clearfix">
+                <?php
+                //$defaults = array(
+//                    	'theme_location'  => 'sub_menu',
+//                    	//'menu'            => '',
+//                    	//'container'       => 'div',
+//                    	//'container_class' => '',
+//                    	//'container_id'    => 'jqxMenu',
+//                    	//'menu_class'      => 'menu',
+//                    	//'menu_id'         => '',
+//                    	'echo'            => true,
+//                    	//'fallback_cb'     => 'wp_page_menu',
+//                    	//'before'          => '',
+//                    	//'after'           => '',
+//                    	//'link_before'     => '',
+//                    	//'link_after'      => '',
+//                    	//'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+//                    	//'depth'           => 0,
+//                    	//'walker'          => ''
+//                    );
+                //wp_nav_menu($defaults) ?>
+            </div>
             <!--END MAIN MENU -->
 			<div class="row clearfix">
 				<div class="col-md-12 column">

@@ -24,6 +24,8 @@
  * @subpackage DAIBT
  * @since DAIBT v1.0
  */
+define('thietbi', 'qd-thiet-bi');
+define('danhmuc', 'qd-danh-muc-thiet-bi');
 
 function daibt_scripts() {
     $prepath = get_template_directory_uri();
@@ -59,4 +61,19 @@ register_nav_menus( array(
 	'main_menu' => 'Main nenu',
 	'sub_menu' => 'Sub menu'
 ) );
+
+//WIDGET
+function arphabet_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Primary Sidebar', 'twentyfourteen' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Main sidebar that appears on the left.', 'twentyfourteen' ),
+		//'before_widget' => '<aside id="%1$s" class="widget %2$s" style="width: 250px; margin-right: 100px">',
+        'before_widget' => '<div id="%1$s" class="widget %2$s" style="margin-left:-25px; margin-right: 0px">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
 

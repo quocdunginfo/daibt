@@ -15,7 +15,7 @@
  */
 
 get_header(); ?>
-        <div class="col-md-10 column">
+        <div class="col-md-9 column">
 			<div class="row clearfix">
 				<div class="col-md-12 column">
 					Main
