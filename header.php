@@ -52,7 +52,7 @@
 </head>
 
 <body style="padding-top: 0px;">
-<div class="container" style="width: 1000px; margin-top: -32px;">
+<div class="container" style="width: 1000px; <!-- margin-top: -32px; -->">
 	<!-- HEADER -->
     <div class="row clearfix" style="z-index: 1;">
 		<div class="col-md-3 column">
