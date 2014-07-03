@@ -24,8 +24,11 @@
  * @subpackage DAIBT
  * @since DAIBT v1.0
  */
+ //taxonomy query
 define('thietbi', 'qd-thiet-bi');
 define('danhmuc', 'qd-danh-muc-thiet-bi');
+//css pagination
+define('css_current_background', 'antiquewhite');
 
 function daibt_scripts() {
     $prepath = get_template_directory_uri();
@@ -54,7 +57,6 @@ function daibt_scripts() {
         
         
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'daibt_scripts' );
 register_nav_menus( array(

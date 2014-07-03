@@ -32,7 +32,7 @@
                         query_posts($args);
                         $total_records = $wp_query->post_count;
                         
-                        $total_page = $total_records/$per_page;
+                        $total_page = (int)($total_records/$per_page);
                         $total_page += $total_records % $per_page > 0?1:0;
 
                         //GET RECORDS FOR CURRENT PAGE
@@ -90,8 +90,8 @@
                             
                     <!-- pagination -->
                     <style>
-                      li a.current{
-                        background-color: antiquewhite;
+                      ul.pagination li a.current{
+                        background-color: <?php echo css_current_background; ?>;
                       }
                       </style>
                     <div class="clearfix"></div>

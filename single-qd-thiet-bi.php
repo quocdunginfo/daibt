@@ -19,6 +19,10 @@ get_header(); ?>
                       <div class="panel-heading">
                         <h3 class="panel-title">
                             <?php echo the_title(); ?>
+                            <div class="pull-right">
+                            
+                            Đăng bởi <?php the_author(); ?>, <?php the_date(); ?>
+                            </div>
                         </h3>
                       </div>
                       <div class="panel-body">
@@ -54,11 +58,6 @@ get_header(); ?>
                     </div>
 					
 				<?php endwhile; ?>
-				</div>
-			</div>
-			<div class="row clearfix">
-				<div class="col-md-12 column">
-					Sub Content
 				</div>
 			</div>
 		</div>
