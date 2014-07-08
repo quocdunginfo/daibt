@@ -28,7 +28,7 @@ get_header(); ?>
                       <div class="panel-body">
                             <div class="row clearfix">
                                 <div class="thumbnail" style="border: 0px;">
-            					  <img style="height: 300px;" src="<?php echo types_render_field('qd-meta-hinhanh-thietbi', array('raw'=>'true')); ?>" alt="">
+            					  <img style="height: 300px;" src="<?php echo types_render_field('qd-meta-hinhanh-thietbi', array('url'=>'true')); ?>" alt="">
             					  <div class="caption">
                                         <h4>
 											Giá:

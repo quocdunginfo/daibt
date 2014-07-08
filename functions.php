@@ -79,3 +79,110 @@ function arphabet_widgets_init() {
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
+//custom query vars
+function add_query_vars_filter( $vars ){
+  $vars[] = "order_by";
+  $vars[] = "order_rule";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );
+
+//ORDER
+/**
+ * qd_request_active_class()
+ * Trả về tên class là active nếu như khớp với ORDER
+ * @param string $register
+ * @return 'active' || ''
+ */
+function qd_request_active_class($register='id,DESC')
+{
+    $order_by = get_query_var('order_by','id');
+    $order_rule = get_query_var('order_rule','DESC');
+    $compare = $order_by.','.$order_rule;
+    if(strtoupper($compare)===strtoupper($register))
+    {
+        return 'active';
+    }
+    return '';
+}
+//ORDER
+/**
+ * qd_request_active_class()
+ * Trả về tên công khai nếu như khớp với ORDER
+ * @param string $register
+ * @return 'active' || ''
+ */
+function qd_request_active_name()
+{
+    $order_by = get_query_var('order_by','id');
+    $order_rule = get_query_var('order_rule','DESC');
+    $compare = $order_by.','.$order_rule;
+    
+    return qd_request_element_name($compare);
+}
+
+/**
+ * qd_request_element_name()
+ * Trả về tên tương ứng với order register
+ * @param string $register
+ * @return void
+ */
+function qd_request_element_name($register='id,DESC')
+{
+    $register = strtoupper($register);
+    switch($register)
+    {
+        case 'ID,DESC': return 'Mới nhất trước';
+        case 'ID,ASC': return 'Cũ nhất trước';
+        case 'PRICE,DESC': return 'Giá giảm dần';
+        case 'PRICE,ASC': return 'Giá tăng dần';
+        case 'TITLE,ASC': return 'Tên A > Z';
+        case 'TITLE,DESC': return 'Tên Z > A';
+        default: return $register;
+    }
+}
+function qd_order_is_meta_key($field_name='id')
+{
+    return strpos(qd_request_alias($field_name), 'wpcf-')!==false;
+}
+function qd_request_alias($field_name='id')
+{
+    switch($field_name)
+    {
+        case 'price': return 'wpcf-qd-meta-gia';
+        default: return $field_name;
+    }
+}
+function qd_request_element_url($register='id,DESC', $base_url='')
+{
+    $orders = explode(',', $register);
+    if(sizeof($orders)<2)
+    {
+        return $base_url;
+    }
+    $order_by = $orders[0];
+    $order_rule = $orders[1];
+    $tmp = add_query_arg('order_by', $order_by, $base_url);
+    $tmp = add_query_arg('order_rule', $order_rule, $tmp);
+    
+    return $tmp;
+}
+
+/**
+ * qd_order_item_li()
+ * Hỗ trợ echo tự động
+ * @param string $register
+ * @param string $base_url
+ * @return void
+ */
+function qd_order_item_li($register='id,DESC', $base_url='')
+{
+    ?>
+    <li class="<?php echo qd_request_active_class($register); ?>">
+        <a href="<?php echo qd_request_element_url($register, $base_url); ?>">
+            <?php echo qd_request_element_name($register); ?>
+        </a>
+    </li>
+    <?php
+}
+//END ORDER
