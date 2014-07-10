@@ -6,7 +6,8 @@ get_header(); ?>
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h3 class="panel-title pull-left" style="padding-top: 10px;">
-							<?php echo single_term_title(); ?>
+							<?php //echo single_term_title(); ?>
+                            <?php echo qd_breadcrum(); ?>
 						</h3>
                         <?php
                         //GET FROM URL QUERY
@@ -16,8 +17,8 @@ get_header(); ?>
                         $order_rule = get_query_var('order_rule', 'DESC');
                         
                         
-                        $qd_cat_id = get_queried_object()->term_id;//ID DANH MUC
-                        $curent_url = get_term_link($qd_cat_id, danhmuc);//URL DANH MUC
+                        $qd_cat_obj = get_queried_object();//ID DANH MUC
+                        $curent_url = get_term_link($qd_cat_obj, $qd_cat_obj->taxonomy);//URL DANH MUC
                         $base_link = add_query_arg( 'page', '1', $curent_url);//always page=1 when switch order condition
                         ?>
                         <!-- ORDER COMBOBOX -->

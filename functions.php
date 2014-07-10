@@ -186,3 +186,38 @@ function qd_order_item_li($register='id,DESC', $base_url='')
     <?php
 }
 //END ORDER
+
+//BREADCUM
+function qd_breadcrum()
+{
+    $delimiter = ' » ';
+    $obj = get_queried_object();
+    $array = array();
+    array_push($array,$obj);
+    while(true)
+    {
+        if($obj->parent<=0)
+        {
+            break;
+        }
+        $obj = get_term($obj->parent,$obj->taxonomy);
+        array_push($array,$obj);
+    }
+    
+    $array = array_reverse($array);
+    $count = count($array);
+    for($i=0;$i<$count;$i++)
+    {
+        $item = $array[$i];
+        $link = get_term_link($item, $item->taxonomy);
+        if($i<$count-1)
+        {
+            echo $item->name.$delimiter;
+        }
+        else
+        {
+            echo $item->name;
+        }
+    }
+}
+
