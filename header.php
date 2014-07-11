@@ -78,7 +78,7 @@ body {
                                 
 
 <body>
-<div class="container" style="width: 1000px; <!-- margin-top: -32px; -->">
+<div class="container" style="width: 1000px;">
 	<!-- HEADER -->
     <div class="row clearfix" style="z-index: 1;">
 		<div class="col-md-3 column">
@@ -98,7 +98,9 @@ body {
 		<!-- LEFT -->
         <div class="col-md-3 column">
             <div class="row clearfix" >
-                <?php get_sidebar('sidebar-1'); ?>
+                <div class="col-md-12 column">
+                    <?php get_sidebar(); ?>
+                </div>
             </div>
             
 		</div>
