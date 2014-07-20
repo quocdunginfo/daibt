@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>DAIBT</title>
+  <title><?php echo ot_get_option('website_title') ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
+  <!-- <meta name="description" content=""> -->
   <meta name="author" content="quocdunginfo">
     <!-- =====Layout===== -->
 	<!--link rel="stylesheet/less" href="layoutit/less/bootstrap.less" type="text/css" /-->
@@ -78,12 +78,12 @@ body {
                                 
 
 <body>
-<div class="container" style="width: 1000px;">
+<div class="container" style="max-width: 1024px;">
 	<!-- HEADER -->
     <div class="row clearfix" style="z-index: 1;">
-		<div class="col-md-3 column">
+		<div class="col-md-3 column text-center">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-    			     <img src="<?php echo ot_get_option('logo') ?>" width="200px" height="200px" alt="">
+    			     <img src="<?php echo ot_get_option('logo') ?>" height="200px" alt="">
             </a>
 		</div>
 		<div class="col-md-9 column">

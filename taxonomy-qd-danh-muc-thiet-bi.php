@@ -45,7 +45,7 @@ get_header(); ?>
 						<?php
                         
                         //USER PRESET
-                        $per_page = 3;
+                        $per_page = 9;
                         $per_row = 4;
                         ////COUNT TOTAL BY CONDITION
                         $args = array_merge(

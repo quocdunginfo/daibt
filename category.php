@@ -11,7 +11,7 @@ get_header(); ?>
     <div class="col-md-9 column">
 			<div class="row clearfix">
 				<div class="col-md-12 column">
-                <script>
+                <!-- <script>
                 $(function(){
                     // Check the initial Poistion of the Sticky Header
                     var stickyHeaderTop = $('#fixednav').offset().top;
@@ -24,8 +24,9 @@ get_header(); ?>
                             }
                     });
                 });
-                </script>
-                <div id="fixednav" class="panel panel-default" style="z-index: 1000; width: 720px;">
+                </script> -->
+                <!-- style="z-index: 1000; width: 720px;" -->
+                <div id="fixednav" class="panel panel-default" >
                       <div class="panel-heading">
                         <h3 class="panel-title pull-left" style="padding-top: 10px;">
                             <?php //echo single_term_title(); ?>
@@ -65,7 +66,7 @@ get_header(); ?>
                 
 
                 //USER PRESET
-                $per_page = 2;
+                $per_page = 9;
                 //COUNT TOTAL BY CONDITION
                 $args = array_merge(
                     $wp_query->query_vars,

@@ -80,9 +80,9 @@ function arphabet_widgets_init() {
     );
     register_sidebar(
         array(
-    		'name'          => __( 'Footer Sidebar', 'twentyfourteen' ),
+    		'name'          => __( 'Footer Sidebar', 'twentyfourteen2' ),
     		'id'            => 'sidebar-2',
-    		'description'   => __( 'Footer sidebar that appears on the left.', 'twentyfourteen' ),
+    		'description'   => __( 'Footer sidebar that appears on the left.', 'twentyfourteen2' ),
     		//'before_widget' => '<aside id="%1$s" class="widget %2$s" style="width: 250px; margin-right: 100px">',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
     		'after_widget'  => '</div>',
@@ -92,14 +92,14 @@ function arphabet_widgets_init() {
     );
     register_sidebar(
         array(
-    		'name'          => __( 'Footer Sidebar', 'twentyfourteen' ),
+    		'name'          => __( 'Sidebar 3', 'twentyfourteen3' ),
     		'id'            => 'sidebar-3',
-    		'description'   => __( 'Footer sidebar that appears on the left.', 'twentyfourteen' ),
+    		'description'   => __( 'Sidebar 3', 'twentyfourteen3' ),
     		//'before_widget' => '<aside id="%1$s" class="widget %2$s" style="width: 250px; margin-right: 100px">',
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
     		'after_widget'  => '</div>',
     		'before_title'  => '<h5 class="widget-title">',
-    		'after_title'   => '</h5>',
+    		'after_title'   => '</h5>'
     	)
     );
 }
