@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title><?php echo ot_get_option('website_title') ?></title>
+  <title><?php
+  wp_title( '|', true, 'right' );
+  //echo ot_get_option('website_title') ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <meta name="description" content=""> -->
   <meta name="author" content="quocdunginfo">
@@ -49,6 +51,15 @@
         $('a[href*="wonderplugin.com"]').hide();
     });
 	</script>
+    <!-- quocdunginfo font size -->
+    <style>
+    .qd-title-size{
+        font-size: 16px;
+    }
+    .qd-content-size{
+        font-size: 14px;
+    }
+    </style>
 </head>
 
 <?php
@@ -72,6 +83,8 @@ body {
     -o-background-size: cover;
     
     background-size: cover;
+    
+    line-height: 1;
 }
 </style>
 <?php endif; ?>

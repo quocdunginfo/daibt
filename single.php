@@ -18,13 +18,13 @@ get_header(); ?>
     
     			<div class="panel panel-default">
                   <div class="panel-heading">
-                    <h3 class="panel-title">
+                    <h1 class="panel-title pull-left qd-title-size">
                         <?php echo the_title(); ?>
-                        <div class="pull-right">
-                            
-                            Đăng bởi <?php the_author(); ?>, <?php the_date(); ?>
-                        </div>
-                    </h3>
+                    </h1>
+                    <div class="pull-right qd-title-size">
+                        Đăng bởi <?php the_author(); ?>, <?php the_date(); ?>
+                    </div>
+                    <div class="clearfix"></div>
                   </div>
                   <div class="panel-body">
                         <?php echo the_content(); ?>

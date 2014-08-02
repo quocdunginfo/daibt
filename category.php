@@ -28,10 +28,10 @@ get_header(); ?>
                 <!-- style="z-index: 1000; width: 720px;" -->
                 <div id="fixednav" class="panel panel-default" >
                       <div class="panel-heading">
-                        <h3 class="panel-title pull-left" style="padding-top: 10px;">
+                        <h1 class="panel-title pull-left qd-title-size" style="padding-top: 10px;">
                             <?php //echo single_term_title(); ?>
                             <?php echo qd_breadcrum(); ?>
-                        </h3>
+                        </h1>
                         <?php
                         //GET FROM URL QUERY
                         $current_page = get_query_var('page', '1');
@@ -99,12 +99,14 @@ get_header(); ?>
 
 					<div class="panel panel-default">
                       <div class="panel-heading">
-                        <h3 class="panel-title">
+                        <h2 class="panel-title qd-title-size">
                             <?php echo the_title(); ?>
-                        </h3>
+                        </h2>
                       </div>
                       <div class="panel-body">
+                            <div class="qd-content-size">
                             <?php echo the_content(); ?>
+                            </div>
                             <div class="row clear-fix">
                                 <div class="col-md-12 column">
                                     <a class="pull-right btn btn-primary btn-sm" href="<?php echo get_permalink($next_post); ?>" role="button">

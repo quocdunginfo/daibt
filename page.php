@@ -22,12 +22,11 @@ get_header(); ?>
 
 			<div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">
+                <h1 class="panel-title qd-title-size">
                     <?php echo the_title(); ?>
-                    <div class="pull-right">DATETIME</div>
-                </h3>
+                </h1>
               </div>
-              <div class="panel-body">
+              <div class="panel-body qd-content-size">
                     <?php echo the_content(); ?>
               </div>
             </div>

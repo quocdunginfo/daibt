@@ -7,12 +7,14 @@ get_header(); ?>
 		<div class="col-md-12 column">
 			<div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">
+                <h1 class="panel-title qd-title-size">
                     404 ERROR (Page not found)
-                </h3>
+                </h1>
               </div>
               <div class="panel-body">
+                <h2 class="qd-content-size">
                     Vui lòng kiểm tra lại đường dẫn! Nếu bạn nghĩ đây là lỗi, vui lòng thông báo qua mục liên hệ! Cảm ơn!
+                </h2>
               </div>
             </div>
 		</div>

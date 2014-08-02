@@ -5,10 +5,10 @@ get_header(); ?>
 			<div class="col-md-12 column">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h3 class="panel-title pull-left" style="padding-top: 10px;">
+						<h1 class="panel-title pull-left qd-title-size" style="padding-top: 10px;">
 							<?php //echo single_term_title(); ?>
                             <?php echo qd_breadcrum(); ?>
-						</h3>
+						</h1>
                         <?php
                         //GET FROM URL QUERY
                         $current_page = get_query_var('page', '1');
@@ -97,9 +97,9 @@ get_header(); ?>
 									<img style="height: 144px;" src="<?php echo types_render_field('qd-meta-hinhanh-thietbi', array('url'=>'true', 'size'=>'medium')); ?>" alt="" />
 									<a href="<?php echo the_permalink(); ?>">
                                     <div class="caption">
-										<h4 style="word-wrap: break-word;">
+										<h2 class="qd-title-size" style="word-wrap: break-word;">
 											<?php echo the_title(); ?>
-										</h4>
+										</h2>
 										<p>
 											<?php echo types_render_field('qd-meta-gia', array('raw'=>'true')); ?>
 										</p>

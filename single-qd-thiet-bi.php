@@ -17,27 +17,26 @@ get_header(); ?>
 
 					<div class="panel panel-default">
                       <div class="panel-heading">
-                        <h3 class="panel-title">
+                        <h1 class="panel-title pull-left">
                             <?php echo the_title(); ?>
-                            <div class="pull-right">
-                            
+                        </h1>
+                        <div class="pull-right">
                             Đăng bởi <?php the_author(); ?>, <?php the_date(); ?>
-                            </div>
-                        </h3>
+                        </div>
+                        <div class="clearfix"></div>
                       </div>
                       <div class="panel-body">
                             <div class="row clearfix">
                                 <div class="thumbnail" style="border: 0px;">
             					  <img style="height: 300px;" src="<?php echo types_render_field('qd-meta-hinhanh-thietbi', array('url'=>'true')); ?>" alt="">
             					  <div class="caption">
-                                        <h4>
+                                        <h2 class="qd-title-size">
 											Giá:
                                             <?php echo types_render_field('qd-meta-gia', array('raw'=>'true')); ?>
-										</h4>
-                                        <h5>
+										</h2>
+                                        <div>
                                             <?php echo the_content() ?>
-                                        </h5>
-                                        
+                                        </div>
             					  </div>
             					</div>
                             </div>

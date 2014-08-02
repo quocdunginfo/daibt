@@ -18,10 +18,9 @@ get_header(); ?>
 
 			<div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">
+                <h1 class="panel-title qd-title-size">
                     <?php echo the_title(); ?>
-                    <div class="pull-right"></div>
-                </h3>
+                </h1>
               </div>
               <!-- Override WPCF7 CSS display: inline-block gây thiếu WIDTH khi bấm nút gửi mà trường đó bắt require -->
                 <style>
@@ -38,7 +37,7 @@ get_header(); ?>
                             echo do_shortcode(ot_get_option('contact_form_shortcode')); ?>
                         </div>
                         <div class="col-lg-6">
-                            <div>
+                            <div class="qd-content-size">
                                 <?php the_content();?>
                             </div>
                             <?php
